@@ -24,27 +24,6 @@
             <label for="huey">{{$question->e}}</label><br>
             <br>
 
-            <!-- <h2>Question 2: {{$question_two->question}}</h2>
-            <input type="radio" id="huey" name="drone" value="huey" checked>
-            <label for="huey">{{$question_two->a}}</label>
-            <input type="radio" id="huey" name="drone" value="huey">
-            <label for="huey">{{$question_two->b}}</label>
-            <input type="radio" id="huey" name="drone" value="huey">
-            <label for="huey">{{$question_two->c}}</label>
-            <br>
-
-            <h2>Question 3: {{$question_three->question}}</h2>
-            <input type="radio" id="huey" name="drone" value="huey" checked>
-            <label for="huey">{{$question_three->a}}</label>
-            <input type="radio" id="huey" name="drone" value="huey">
-            <label for="huey">{{$question_three->b}}</label>
-            <input type="radio" id="huey" name="drone" value="huey">
-            <label for="huey">{{$question_three->c}}</label>
-            <input type="radio" id="huey" name="drone" value="huey">
-            <label for="huey">{{$question_three->d}}</label>
-            <input type="radio" id="huey" name="drone" value="huey">
-            <label for="huey">{{$question_three->e}}</label>
-            <br> -->
 
 
             <h2>Write the secret word below</h2>

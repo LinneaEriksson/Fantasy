@@ -22,7 +22,8 @@ return new class extends Migration
             $table->string('power');
             $table->string('colour');
             $table->integer('book_id');
-            $table->string('summary');
+            $table->string('summary', 900);
+            $table->string('img_url');
         });
     }
 

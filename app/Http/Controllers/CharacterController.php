@@ -9,13 +9,17 @@ use Illuminate\Http\Request;
 
 class CharacterController extends Controller
 {
-    public function character()
+    public function character(Request $request)
     {
+        $this->validate($request, [
+            'secret' => 'required|string'
+        ]);
+
         $answer = $_POST['answer'];
         $secret = $_POST['secret'];
         $book_id = $_GET['book_id'];
 
-        $character = Character::where('Power', '=', $answer, 'and', 'book_id', '=', $book_id)->first();
+        $character = Character::where('power', '=', $answer, 'and', 'book_id', '=', $book_id)->first();
 
         // if ($answer == 'Ambition' || $answer == 'Loyalty' || $answer == 'Magic') {
         //     $question = Question::where('book_id', '=', $book_id)->skip(2)->first();
