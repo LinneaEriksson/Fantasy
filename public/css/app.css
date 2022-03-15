@@ -109,6 +109,14 @@ body {
     cursor: pointer;
 }
 
+.book-section a {
+    color: bisque;
+}
+
+.book-section a:hover {
+    color: rgb(186, 189, 224);
+}
+
 .character-section {
     color: bisque;
     display: flex;

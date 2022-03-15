@@ -30,7 +30,7 @@
             <label for="secret">Secret word: </label>
             <input type="text" name="secret"></input>
             <br>
-            <p>Hint: {{$book->hint}}</p>
+            <p>Hint: <a href="{{$book->hint_url}}">{{$book->hint}}</a></p>
             <br>
 
             <button type="submit">Find out who you are!</button>
