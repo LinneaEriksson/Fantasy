@@ -242,5 +242,11 @@ h2 {
     margin-bottom: 20px;
 }
 
+@media screen and (max-width: 750px) {
+    .character {
+        width: 90%;
+    }
+}
+
 /* run npm run dev in terminal to add styling, this is for laravel mix. Add all your css-files here */
 
