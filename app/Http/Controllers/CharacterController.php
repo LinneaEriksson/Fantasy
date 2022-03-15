@@ -15,9 +15,10 @@ class CharacterController extends Controller
             'secret' => 'required|string'
         ]);
 
-        $answer = $_POST['answer'];
-        $secret = $_POST['secret'];
-        $book_id = $_GET['book_id'];
+        $answer = request()->get('answer');
+        $secret = request()->get('secret');
+        $book_id = request()->query('book_id');
+
 
         $character = Character::where('power', '=', $answer, 'and', 'book_id', '=', $book_id)->first();
 
@@ -27,8 +28,9 @@ class CharacterController extends Controller
         if ($secret == $password) {
             return view('/character', ['character' => $character, 'answer' => $answer]);
         } else {
-            echo 'Wrong secret word! Try again!';
-            // return back()->withErrors('Wrong secret word! Try again!');
+
+            // echo 'Wrong secret word! Try again!';
+            return back()->withErrors('Wrong secret word! Try again!');
         }
     }
 }

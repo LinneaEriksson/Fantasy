@@ -10,7 +10,7 @@ class CharacterGalleryController extends Controller
 {
     public function charactergallery()
     {
-        $book_id = $_GET['book_id'];
+        $book_id = request()->query('book_id');
         $book = Book::where('id', '=', $book_id)->first();
         $characters = Character::all()->where('book_id', '=', $book_id);
 

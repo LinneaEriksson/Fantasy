@@ -21,12 +21,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index'])->middleware('guest')->name('index');
 
-Route::post('/book', [BookController::class, 'book', 'question'])->name('book');
+Route::post('/book', [BookController::class, 'book', 'question'])->middleware('guest')->name('book');
 
-Route::post('/character', [CharacterController::class, 'character'])->name('character');
+Route::post('/character', [CharacterController::class, 'character'])->middleware('guest')->name('character');
 
 Route::get('/gallery', [GalleryController::class, 'gallery'])->middleware('guest')->name('gallery');
 
-Route::post('/charactergallery', [CharacterGalleryController::class, 'charactergallery'])->name('charactergallery');
+Route::post('/charactergallery', [CharacterGalleryController::class, 'charactergallery'])->middleware('guest')->name('charactergallery');
 
 // Route::post('/extra', [CharacterController::class, 'character'])->name('extra');

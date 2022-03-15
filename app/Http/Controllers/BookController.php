@@ -11,7 +11,7 @@ class BookController extends Controller
 {
     public function book()
     {
-        $book_id = $_GET['id'];
+        $book_id = request()->query('id');
         $book = Book::where('id', '=', $book_id)->first();
         $question = Question::where('book_id', '=', $book_id)->first();
 
