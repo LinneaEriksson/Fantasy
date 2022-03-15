@@ -6,19 +6,20 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-// class CharacterTest extends TestCase
-// {
-//     /**
-//      * A basic feature test example.
-//      *
-//      * @return void
-//      */
-//     public function test_example()
-//     {
-//         $response = $this->get('/');
+class CharacterTest extends TestCase
+{
+    use RefreshDatabase;
+    /**
+     * A basic feature test example.
+     *
+     * @return void
+     */
+    public function test_view_character()
+    {
 
-//         $response->assertStatus(200);
+        $this->seed();
+        $response = $this->post('character?book_id=1', ['secret' => 'alohomora', 'answer' => 'Bravery']);
 
-//         , ['secret' => '', '' => '']
-//     }
-// }
+        $response->assertStatus(200);
+    }
+}
