@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Book;
+use App\Models\Character;
+use App\Models\Question;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,6 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        //The books in the database
         $books = [
             new Book([
                 'author' => 'J.K Rowling',
@@ -38,6 +41,78 @@ class DatabaseSeeder extends Seeder
         ];
         foreach ($books as $book) {
             $book->save();
+        }
+
+        //The questions in the database
+        $questions = [
+            new Question([
+                'question' => 'What word would best describe you?',
+                'a' => 'Bravery',
+                'b' => 'Ambition',
+                'c' => 'Loyalty',
+                'd' => 'Determination',
+                'e' => 'Wisdom',
+                'book_id' => 1
+            ]),
+
+            new Question([
+                'question' => 'What word would best describe you?',
+                'a' => 'Courage',
+                'b' => 'Speed',
+                'c' => 'Strength',
+                'd' => 'Relentlessness',
+                'e' => 'Magic',
+                'book_id' => 2
+            ]),
+
+            new Question([
+                'question' => 'What is your favourite colour?',
+                'a' => 'Red',
+                'b' => 'Black',
+                'c' => 'White',
+                'd' => 'Orange',
+                'e' => 'Blue',
+                'book_id' => 1
+            ]),
+
+            new Question([
+                'question' => 'What is your favourite colour?',
+                'a' => 'Black',
+                'b' => 'White',
+                'c' => 'Red',
+                'd' => 'Green',
+                'e' => 'Brown',
+                'book_id' => 2
+            ])
+        ];
+
+        foreach ($questions as $question) {
+            $question->save();
+        }
+
+        //The characters in the database
+        $characters = [
+            new Character([
+                'name' => 'Gandalf the White',
+                'age' => 11000,
+                'creature' => 'Wizard',
+                'alignment' => 'Good',
+                'power' => 'Magic',
+                'colour' => 'White',
+                'book_id' => 2,
+                'summary' => 'Gandalf the White replaced Saruman the White as
+                the leader of the Istari in the War of the Ring. Gandalf is old and
+                wise and has experienced much in his lifetime, as have you! You rely
+                on your powers and see the good in everyone around you. Most of all,
+                you never underestimate anyone, and know that also a seemingly insignificant
+                person can change the course of the world. This humility makes you a great
+                leader and mentor to others, and make people dare to believe in themselves.
+                You are the sort of booster everyone needs in their life!'
+            ])
+        ];
+
+        foreach ($characters as $character) {
+            $character->save();
         }
     }
 }

@@ -18,6 +18,10 @@ return new class extends Migration
             $table->string('author');
             $table->string('title');
             $table->integer('year');
+            $table->string('img_url');
+            $table->string('password');
+            $table->string('hint');
+            $table->string('hint_url');
         });
     }
 

@@ -16,6 +16,8 @@ class Book extends Model
         'year',
         'img_url',
         'password',
+        'hint',
+        'hint_url'
     ];
 
     public $timestamps = false;

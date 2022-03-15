@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('b');
             $table->string('c');
             $table->string('d');
+            $table->string('e');
+            $table->integer('book_id');
         });
     }
 
