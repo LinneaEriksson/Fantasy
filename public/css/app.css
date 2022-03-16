@@ -107,6 +107,7 @@ body {
     background-color: rgb(255, 243, 205);
     border: none;
     cursor: pointer;
+    padding: 10px;
 }
 
 .book-section a {
